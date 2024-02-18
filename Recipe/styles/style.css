@@ -1,0 +1,210 @@
+:root {
+    --blanco: hsl(0, 0%, 100%);
+    --blancoRosa: hsl(330, 100%, 98%);
+    --cascaraHuevo: hsl(30, 54%, 90%);
+    --grisClaro: hsl(30, 18%, 87%);
+    --marronWenge: hsl(30, 10%, 34%);
+    --carbonOscuro: hsl(24, 5%, 18%);
+
+    --Nutmeg: hsl(14, 45%, 36%);
+    --DarkRaspberry: hsl(332, 51%, 32%);
+
+    --fuenteTitulo: "Young Serif", serif;
+    --fuenteSecundario: "Outfit", sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cascaraHuevo);
+}
+
+h1, h2, h3 {
+    font-family: var(--fuenteTitulo);
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+}
+
+p {
+    font-family: var(--fuenteSecundario);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--marronWenge);
+    margin: 0;
+}
+
+.contenedor {
+    background-color: var(--blanco);
+    border-radius: 2rem;
+    padding: 2rem 3rem 2rem 3rem;
+    width: 60rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+@media (max-width: 620px) {
+    .contenedor {
+        width: 100%;
+    }
+
+    .body {
+        display: inline;
+    }
+
+    img {
+        width: 97%;
+        height: 20rem;
+        border: 1rem;
+        padding: 0;
+    }
+}
+
+img {
+    max-width: 100%;
+    border-radius: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Preparacion */
+.preparacion {
+    background-color: var(--blancoRosa);
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.preparacion h3 {
+    color: var(--DarkRaspberry);
+    font-weight: bold;
+}
+
+.preparacion span {
+    color: var(--carbonOscuro);
+    font-weight: bold;
+    font-family: var(--fuenteSecundario);
+}
+
+.preparacion_lista li {
+    color: var(--DarkRaspberry);
+    font-weight: 600;
+    font-family: var(--fuenteSecundario);
+    margin-top: 1rem;
+    padding-left: 1rem;
+}
+
+.preparacion_lista {
+    padding-left: 2rem;
+}
+
+.preparacion_lista p {
+    color: var(--marronWenge);
+    display: inline;
+    font-weight: 500;
+}
+
+
+/* Ingredientes */
+.ingredientes {
+    margin-top: 2rem;
+}
+
+.ingredientes h2 {
+    color: var(--Nutmeg);
+}
+
+.ingredientes_lista p {
+    color: var(--carbonOscuro);
+    margin-top: 1rem;
+    padding-left: 1rem;
+}
+
+.ingredientes_lista li {
+    color: var(--Nutmeg);
+}
+
+/* Instruccciones */
+.instrucciones h2 {
+    color: var(--Nutmeg);    
+}
+
+.instrucciones_lista p {
+    display: inline;
+}
+
+.instrucciones_lista li {
+    list-style-type: decimal;
+    color: var(--Nutmeg);
+    font-weight: bold;
+    padding-left: 1rem;
+    margin-top: 1rem;
+    font-family: var(--fuenteSecundario);
+}
+
+.instrucciones span {
+    color: var(--carbonOscuro);
+    font-family: var(--fuenteSecundario);
+}
+
+
+
+/* Nutricicion*/
+.nutricion {
+    margin-top: 2rem;
+    color: var(--carbonOscuro);
+}
+
+.nutricion p {
+    margin-bottom: 1rem;
+}
+
+.nutricion h2 {
+    color: var(--Nutmeg);
+    margin-bottom: 2rem;
+}
+
+.nutricion_tabla span {
+    color: var(--Nutmeg);
+    font-weight: bold;
+    font-family: var(--fuenteSecundario);
+}
+
+.nutricion_tabla td {
+    font-family: var(--fuenteSecundario);
+    color: grey;
+    padding: 1.5rem;
+}
+
+table {
+    width: 100%;
+    max-width: 60rem;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table tr:last-child td {
+    border-bottom: none;
+}
+
+/* footer */
+.attribution { 
+    font-size: 2rem; 
+    text-align: center; 
+    margin-bottom: 2rem;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
