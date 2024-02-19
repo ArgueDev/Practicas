@@ -1,0 +1,126 @@
+:root {
+    /* Primary Color */
+    --green: hsl(75, 94%, 57%);
+
+    /* Neutral Colors */
+    --white: hsl(0, 0%, 100%);
+    --grey: hsl(0, 0%, 20%);
+    --darkGrey: hsl(0, 0%, 12%);
+    --offBlack: hsl(0, 0%, 8%);
+
+    /* Tipografia */
+    --fuentePrincipal: "Inter", sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: var(--offBlack);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-family: var(--fuentePrincipal);
+    margin: 0 auto;
+    height: 100vh;
+}
+
+.contenedor {
+    width: 40rem;
+    height: auto;
+    background-color: var(--darkGrey);
+    border-radius: 2rem;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.imagen {
+    width: 10rem; 
+    height: 10rem;
+    border-radius: 50%;
+    overflow: hidden; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.informacion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.informacion h2 {
+    color: var(--white);
+    font-weight: bold;
+    margin-bottom: .5rem;
+}
+
+.informacion p {
+    color: var(--green);
+    font-weight: 600;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.informacion span {
+    color: var(--white);
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 100;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cuadrado {
+    width: 30rem;
+    height: 2rem;
+    background-color: var(--grey);
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-top: 2rem;
+}
+
+.cuadrado:hover {
+    background-color: var(--green);
+
+    a{
+        color: var(--offBlack);
+        font-weight: bold;
+    }
+}
+
+
+/* Footer */
+.attribution { 
+    font-size: 1.5rem; 
+    text-align: center; 
+    color: var(--white);
+    margin-top: 2rem;
+}
+.attribution a { 
+    color: var(--green); 
+    text-decoration: none;
+}
