@@ -1,0 +1,138 @@
+:root {
+    /* Primary Color */
+    --darkCyan: hsl(158, 36%, 37%);
+    --darkCyanHover: hsl(157, 65%, 10%);
+    --cream: hsl(30, 38%, 92%);
+
+    /* Neutral Color */
+    --veryDarkBlue: hsl(212, 21%, 14%);
+    --darkGrayishBlue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+
+    /* Fonts */
+    --montserrat: "Montserrat", sans-serif;
+    --fraunces: "Fraunces", serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 14px;
+    margin: 0 auto;
+    background-color: var(--cream);
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.contenedor {
+    max-width: 60rem;
+    height: 45rem;
+    background-color: var(--white);
+    display: flex;
+    gap: 2rem;
+    border-radius: 2rem;
+}
+
+@media (max-width: 500px) {
+    .contenedor {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: auto;
+        margin: 1rem;
+    }
+}
+
+.imagen img {
+    border-radius: 2rem 0rem 0rem 2rem;
+    max-height: 45rem;
+}
+
+@media (max-width: 500px) {
+    .imagen img {
+        border-radius: 2rem 2rem 0rem 0rem;
+        max-width: 100%;
+        height: 30rem;
+        content: url(images/image-product-mobile.jpg);
+    }
+}
+
+.informacion {
+    padding: 1rem;
+}
+
+@media (max-width: 500px) {
+    .informacion {
+        margin: 0rem 2rem 2rem 2rem;
+        padding: 0;
+    }
+}
+
+.titulo {
+    letter-spacing: 1rem;
+    text-transform: uppercase;
+    font-family: var(--montserrat);
+    color: var(--darkGrayishBlue);
+    font-weight: 500;
+}
+
+.informacion h1 {
+    font-family: var(--fraunces);
+    font-weight: 700;
+    font-size: 3.5rem;
+    color: var(--veryDarkBlue);
+    line-height: 3.5rem;
+}
+
+.info {
+    font-family: var(--montserrat);
+    color: var(--darkGrayishBlue);
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+}
+
+.precios {
+    display: flex;
+    gap: 2rem;
+}
+
+.precio {
+    color: var(--darkCyan);
+    font-family: var(--fraunces);
+    font-weight: 700;
+    font-size: 3.5rem;
+    margin: 0;
+}
+
+.cart {
+    background-color: var(--darkCyan);
+    width: auto;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-top: 2rem;
+}
+
+.cart:hover {
+    background-color: var(--darkCyanHover);
+    cursor: pointer;
+}
+
+.cart p {
+    color: var(--white);
+    font-weight: 700;
+    font-family: var(--montserrat);
+}
+
+.precio-tachado {
+    color: var(--darkGrayishBlue);
+    text-decoration: line-through;
+    font-size: 1.4rem;
+}
