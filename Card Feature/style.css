@@ -1,0 +1,144 @@
+:root {
+    /* Primary Colors */
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+
+    /* Neutral Colors */
+    --veryDarkBlue: hsl(234, 12%, 34%);
+    --grayishBlue: hsl(229, 6%, 66%);
+    --veryLightGray: hsl(0, 0%, 98%);
+
+    /* Fonts */
+    --fuente: "Poppins", sans-serif;
+    --weight600: 600;
+    --weight400: 400;
+    --weight200: 200;
+}
+
+/* Globales */
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: var(--fuente);
+}
+
+body {
+    font-size: 16px;
+    display: grid;
+    place-content: center;
+    margin: 0 auto;
+    min-height: 100vh;
+    background-color: var(--veryLightGray);
+}
+
+/* Titulo */
+.contenedor {
+    max-width: 130rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    max-width: 55rem;
+
+    h1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-weight: var(--weight200);
+        color: var(--veryDarkBlue);
+    }
+
+    span {
+        font-weight: var(--weight600);
+    }
+
+    p {
+        margin: 0;
+        color: var(--grayishBlue);
+        font-weight: var(--weight400);
+        text-align: center;
+    }
+}
+
+@media (max-width: 765px) {
+    header {
+        font-size: 12px;    
+        width: 80%;
+    }
+}
+
+/* Clasificados */
+.clasificados {
+    display: flex;
+    gap: 3rem;
+    padding: 5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 820px) {
+    .clasificados {
+        flex-wrap: wrap;
+    }
+}
+
+.clasificado_medio {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem
+}
+
+.clasificado {
+    width: auto;
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 15px var(--grayishBlue);
+}
+
+.informacion {
+    padding: 2rem;
+    background-color: white;
+    margin-top: 0.5rem;
+    border-radius: 0.3rem 0.3rem 1rem 1rem;
+    
+    h3 {
+        margin: 0;
+        color: var(--veryDarkBlue);
+        font-weight: var(--weight600);
+    }
+
+    p {
+        line-height: 1rem;
+        color: var(--grayishBlue);
+        font-weight: var(--weight400);
+        font-size: 1.4rem;
+    }
+
+    img {
+        margin-top: 3rem;
+        margin-left: 25rem;
+    }
+}
+
+.cyan{
+    background-color: var(--cyan);
+}
+
+.rojo {
+    background-color: var(--red);
+}
+
+.naranja {
+    background-color: var(--orange);
+}
+
+.azul {
+    background-color: var(--blue);
+}
