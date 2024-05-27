@@ -1,0 +1,129 @@
+:root {
+    /* Primary Colors */
+    --moderateViolet: hsl(263, 55%, 52%);
+    --veryDarkGrayishBlue: hsl(217, 19%, 35%);
+    --veryDarkBlackishBlue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+
+    /* Neutral colors */
+    --lightGray: hsl(0, 0%, 81%);
+    --lightGrayishBlue: hsl(211, 83%, 93%);
+
+    /* Fonts */
+    --fuente: "Barlow Semi Condensed", sans-serif;
+    --weight500: 500;
+    --weight600: 600;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 13px;
+    font-family: var(--fuente);
+    margin: 0 auto;
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    background-color: var(--lightGrayishBlue);
+}
+
+.contenedor {
+    max-width: 120rem;
+    padding: 2rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.card:nth-child(3) {
+    grid-row: 5 / 5
+}
+
+@media (min-width: 768px) {
+    .contenedor {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .card:first-child {
+        grid-column: 1 / 3;
+    }
+
+    .card:nth-child(3) {
+        grid-row: span 2;
+    }
+
+    .card:last-child {
+        grid-column: 2 / 4;  
+    }
+}
+
+.card {
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: var(--white);
+    color: var(--veryDarkGrayishBlue);
+}
+
+.bg-violeta {
+    background-color: var(--moderateViolet);
+    color: var(--white);
+    background-image: url('../images/bg-pattern-quotation.svg');
+    background-repeat: no-repeat;
+    background-position: top .5rem right 5rem;
+}
+
+.bg-gris {
+    background-color: var(--veryDarkGrayishBlue);
+    color: var(--white);
+}
+
+.bg-azul-oscuro {
+    background-color: var(--veryDarkBlackishBlue);
+    color: var(--white);
+}
+
+
+.perfil {
+    display: flex;
+    
+    img {
+        border-radius: 50%;
+        border: 2px solid;
+        width: 3rem;
+        margin-right: 1rem;
+    }
+
+    span {
+        opacity: 60%;
+    }
+
+}
+
+.header_ img {
+    border-color: hsl(263, 78%, 69%);
+}
+
+.header img {
+    border-color: var(--moderateViolet);
+}
+
+.informacion {
+    padding: 1rem;
+
+    p {
+        font-weight: var(--weight600);
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    span {
+        opacity: 80%;
+    }
+}
