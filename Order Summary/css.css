@@ -1,0 +1,160 @@
+/** Imports */
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+/** Variables */
+:root {
+    /* Primary Colors */
+    --Pale_Blue: hsl(225, 100%, 94%);
+    --Bright_Blue: hsl(245, 75%, 52%);
+
+    /* Neutral Colors */
+    --Very_Pale_Blue: hsl(225, 100%, 98%);
+    --Desaturated_blue: hsl(224, 23%, 55%);
+    --Dark_blue: hsl(223, 47%, 23%);
+
+    /* Fuente */
+    --Font_Size: 16px;
+    --Font_Weight_500: 500;
+    --Font_Weight_700: 700;
+    --Font_Weight_900: 900;
+    --Font_Family: "Red Hat Display", sans-serif;
+}
+
+/** Globales */
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: var(--Pale_Blue);
+    font-size: var(--Font_Size);
+    font-family: var(--Font_Family);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 2rem;
+}
+
+header img{
+    width: 100%;
+    border-radius: 2rem 2rem 0rem 0rem;
+}
+
+.bg {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 0;
+}
+
+.contenedor {
+    width: 40rem;
+    height: auto;
+    background-color: var(--Very_Pale_Blue);
+    border-radius: 2rem;
+    z-index: 1;
+}
+
+.informacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+        color: var(--Dark_blue);
+        font-weight: var(--Font_Weight_900);
+        margin-top: 3rem;
+    }
+
+    p {
+        padding: 2rem;
+        color: var(--Desaturated_blue);
+        font-weight: var(--Font_Weight_500);
+        text-align: center;
+    }
+}
+
+.order {
+    background-color: lightcyan;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+
+    .price {
+        margin-right: 7rem;
+        margin-left: 2rem;
+
+        p {
+            margin: 0;
+            padding: 0;
+            color: var(--Dark_blue);
+            font-weight: var(--Font_Weight_900);
+        }
+
+        span {
+            color: var(--Desaturated_blue);
+            font-weight: var(--Font_Weight_500);
+        }
+
+    }
+    
+    a {
+        color: var(--Bright_Blue);
+        font-weight: var(--Font_Weight_700);
+
+        &:hover {
+            opacity: 50%;
+            text-decoration: none;
+        }
+    }
+}
+
+.botones {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.boton {
+    border: none;
+    font-family: var(--Font_Family);
+    font-size: 1.6rem;
+}
+
+.pay {
+    border: none;
+    background-color: var(--Bright_Blue);
+    color: var(--Very_Pale_Blue);
+    font-weight: var(--Font_Weight_700);
+    border-radius: 1rem;
+    padding: 1rem 7rem;
+    box-shadow: 10px 15px 10px var(--Pale_Blue);
+
+    &:hover {
+        cursor: pointer;
+        opacity: 50%;
+    }
+}
+
+.cancel {
+    margin-top: 2rem;
+    background-color: var(--Very_Pale_Blue);
+    color: var(--Desaturated_blue);
+    font-weight: var(--Font_Weight_700);
+    cursor: pointer;
+
+    &:hover {
+        color: var(--Dark_blue);
+        font-weight: var(--Font_Weight_900);
+    }
+}
+
