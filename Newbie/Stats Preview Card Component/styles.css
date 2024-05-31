@@ -39,6 +39,7 @@ body {
     align-items: center;
     min-height: 100vh;
     background-color: var(--very_dark_blue);
+    padding: 4rem;
 }
 
 .container{
@@ -46,8 +47,15 @@ body {
     max-width: 120rem;
     height: auto;
     border-radius: 1rem;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: column-reverse
+}
+
+@media (min-width: 768px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .info {
