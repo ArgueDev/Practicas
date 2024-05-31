@@ -1,0 +1,117 @@
+/** Imports */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lexend+Deca:wght@100..900&display=swap');
+
+/** Variables */
+:root {
+    /* Primary Colors */
+    --very_dark_blue: hsl(233, 47%, 7%); /** Main Background */
+    --dark_desaturated_blue: hsl(244, 38%, 16%); /** Card Background */
+    --soft_violet: hsl(277, 64%, 61%); /** Accent */
+
+    /* Neutral Colors */
+    --white: hsl(0, 0%, 100%); /** Main Heading, stats */
+    --slightly_transparent_white: hsla(0, 0%, 100%, 0.75); /** Main Paragraph */
+    --slightly_transparent_white2: hsla(0, 0%, 100%, 0.6); /** Stat Headings */
+
+    /* Fuentes */
+    --font_size: 15px;
+    --font_family_inter: "Inter", sans-serif;
+    --font_family_lexend: "Lexend Deca", sans-serif;
+    --font_weight_400: 400;
+    --font_weight_700: 700;
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0 auto;
+}
+
+body {
+    font-size: var(--font_size);
+    font-family: var(--font_family_inter);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--very_dark_blue);
+}
+
+.container{
+    background-color: var(--dark_desaturated_blue);
+    max-width: 120rem;
+    height: auto;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.info {
+    padding: 7rem;
+    
+    h1 {
+        color: var(--slightly_transparent_white);
+        font-weight: var(--font_weight_700);
+        margin-bottom: 2rem;
+        font-size: 4rem;
+    }
+
+    span {
+        color: var(--soft_violet);
+    }
+
+    p {
+        color: var(--slightly_transparent_white2);
+        line-height: 1.8;
+        margin: 0;
+    }
+}
+
+.stats {
+    margin-top: 5rem;
+    display: flex;
+    justify-items: start;
+
+    p {
+        color: var(--slightly_transparent_white);
+        font-weight: var(--font_weight_700);
+        font-size: 3rem;
+    }
+
+    span {
+        color: var(--slightly_transparent_white2);
+        text-transform: uppercase;
+        font-size: var(--font_size);
+        font-weight: 300;
+        font-family: var(--font_family_lexend);
+    }
+}
+
+.portada {
+    position: relative;
+    width: 100%; 
+    max-width: 600px;
+    border-radius: 0rem 1rem 1rem 0rem;
+    overflow: hidden;
+}
+
+.portada img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: inherit;
+}
+
+.color-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(277, 64%, 61%, 0.5);
+    border-radius: inherit;
+}
