@@ -1,0 +1,130 @@
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+:root {
+    /* Primary Colors */
+    --dark_cyan: hsl(185, 75%, 39%);
+    --very_dark_desaturated_blue: hsl(229, 23%, 23%);
+    --dark_grayish_blue: hsl(227, 10%, 46%);
+
+    /* Neutral colors */
+    --dark_gray: hsl(0, 0%, 59%);
+
+    /* Fonts */
+    --font-size: 18px;
+    --font-family: "Kumbh Sans", sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body{
+    font-size: var(--font-size);
+    font-family: var(--font-family);
+    background-color: var(--dark_cyan);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0 auto;
+    position: relative;
+    padding: 2rem;
+    overflow: hidden;
+}
+
+.bg-top, .bg-bottom {
+    position: absolute;
+}
+
+.bg-top {
+    top: -80%;
+    left: -200%;
+}
+
+.bg-bottom {
+    bottom: -80%;
+    right: -200%;
+}
+
+@media (min-width: 475px) {
+    .bg-top {
+        top: -50%;
+        left: -15%;
+    }
+
+    .bg-bottom {
+        bottom: -70%;
+        right: -15%;
+    }
+}
+
+
+.container {
+    position: relative;
+    z-index: 1;
+    width: 40rem;
+    height: auto;
+    border-radius: 1.5rem;
+    background-color: white;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 1.5rem 1.5rem 0rem 0rem;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+
+    img {
+        width: 10rem;
+        border-radius: 50%;
+        border: 4px solid white;
+        margin-top: -5.5rem;
+    }
+
+    p {
+        color: var(--very_dark_desaturated_blue);
+        font-weight: 700;
+    }
+
+    span {
+        color: var(--dark_grayish_blue);
+        font-weight: 400;
+    }
+}
+
+hr {
+    height: 1px;
+    color: var(--dark_gray);
+}
+
+.cantidades {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    margin-bottom: 3rem;
+
+    p {
+        margin-bottom: 0;
+        color: var(--very_dark_desaturated_blue);
+        font-weight: 700;
+        font-size: 2rem
+    };
+
+    span {
+        color: var(--dark_grayish_blue);
+        font-weight: 300;
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+    }
+}
