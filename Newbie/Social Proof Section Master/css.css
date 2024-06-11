@@ -1,0 +1,198 @@
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+:root {
+    /* Primary Colors */
+    --very_dark_magenta: hsl(300, 43%, 22%);
+    --soft_pink: hsl(333, 80%, 67%);
+
+    /* Neutral Colors */
+    --dark_grayish_magenta: hsl(303, 10%, 53%);
+    --light_grayish_magenta: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+
+    /* Fonts */
+    --font_size: 15px;
+    --font_family: "League Spartan", sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0 auto;
+    font-size: var(--font_size);
+    font-family: var(--font_family);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 120rem;
+}
+
+.stats {
+    display: flex;
+    align-items: center;
+}
+
+.info {
+    margin-right: 10rem;
+
+    h1 {
+        color: var(--very_dark_magenta);
+        font-weight: 700;
+        font-size: 5rem;
+        max-width: 40rem;
+    }
+
+    p {
+        color: var(--dark_grayish_magenta);
+        font-weight: 500;
+        font-size: 2rem;
+        line-height: 2rem;
+        max-width: 50rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .info {
+        margin-right: 0rem;
+        text-align: center;
+
+        h1 {
+            margin-left: 2rem;
+        }
+
+        p {
+            margin-left: 3rem;
+            max-width: 35rem;
+        }
+    }
+}
+
+.start {
+    display: flex;
+    align-items: center;
+    background-color: var(--light_grayish_magenta);
+    padding: 1.5rem 9rem 1.5rem 2rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+
+    p {
+        align-items: center;
+        display: inline;
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+        margin-left: 3rem;
+        color: var(--very_dark_magenta);
+        font-weight: 700;
+        font-size: 1.8rem;
+    }
+}
+
+.estrellas img {
+    margin-right: 1rem;
+}
+
+@media (max-width: 768px) {
+    .stats {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .start {
+        display: flex;
+        flex-direction: column;
+        padding: 1.5rem 3rem;
+
+        p {
+            margin: 0;
+        }
+    }
+}
+
+.testimonials {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+}
+
+@media (max-width: 768px) {
+    .testimonials {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 5rem;
+        margin-top: 0rem;
+    }
+}
+
+.card {
+    background-color: var(--very_dark_magenta);
+    border-radius: 1rem;
+    padding: 3rem;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+
+    img {
+        border-radius: 50%;
+        width: 5rem;
+        margin-right: 2rem;
+    }
+
+    p {
+        color: white;
+        font-weight: 700;
+        font-size: 1.8rem;
+        margin: 0;
+        line-height: 3rem;
+    }
+
+    span {
+        color: var(--soft_pink);
+        font-weight: 400;
+        font-size: 1.8rem;
+    }
+}
+
+.testimonal p {
+    color: white;
+    font-weight: 500;
+    font-size: 1.8rem;
+    max-width: 30rem;
+    line-height: 2.5rem;
+}
+
+
+
+@media (min-width: 768px) {
+    .mg-left-4 { margin-left: 4rem; }
+
+    .mg-left-8 { margin-left: 8rem; }
+
+    .mg-right-4 { margin-right: 4rem; }
+
+    .mg-right-8 { margin-right: 8rem; }
+
+    .mg-bottom-6 { margin-bottom: 6rem; }
+
+    .mg-top-3 {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .mg-top-6 { margin-top: 6rem; }
+}
