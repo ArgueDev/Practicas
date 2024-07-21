@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root {
+    /* Primary Color */
+    --gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+
+    /* Neutral Colors */
+    --pale_blue: hsl(243, 100%, 93%);
+    --grayish_blue: hsl(229, 7%, 55%);
+    --dark_blue: hsl(228, 56%, 26%);
+    --very_dark_blue: hsl(229, 57%, 11%);
+
+    /* Fonts */
+    --font_size: 14px;
+    --font_family: "Raleway", sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body{
+    font-size: var(--font_size);
+    font-family: var(--font_family);
+    margin: 0 auto;
+    background-color: var(--very_dark_blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+    /* img {
+        width: 100%;
+        top: 40%;
+    } */
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    max-width: 120rem;
+}
+
+.fylo {
+    background-color: var(--dark_blue);
+    padding: 3rem 6rem 3rem 3rem;
+    border-radius: 1rem 7rem 1rem 1rem;
+}
+
+.icons {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.icon {
+    background-color: var(--very_dark_blue);
+    height: 100%;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.storage {
+    background-color: var(--dark_blue);
+    padding: 3rem;
+    margin-top: 4rem;
+    border-radius: 1rem;
+    width: 50rem;
+
+    p {
+        color: var(--grayish_blue);
+    }
+
+    span {
+        color: var(--pale_blue);
+        font-weight: 700;
+    }
+
+    .estado {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1rem;
+    }
+}
+
+.storage-bar {
+    background-color: var(--very_dark_blue);
+    border-radius: 10px;
+    height: 10px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    /* margin-bottom: 20px; */
+}  
+
+.storage-progress {
+    background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    height: 100%;
+    width: 81.5%; /* Ajusta esto para el porcentaje de uso */
+    border-radius: 10px;
+}
+
+.storage-progress::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 19%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+}
