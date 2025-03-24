@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@theme {
+    
+    --morado-100: #dacffc;
+    --morado-500: #7650dc;
+    --amarillo-100: #f9eee1;
+    --amarillo-500: #ffcb6b;
+}
